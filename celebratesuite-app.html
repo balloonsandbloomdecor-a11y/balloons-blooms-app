@@ -1101,102 +1101,14 @@
                     <p>Let's make your special moment unforgettable!</p>
                 </div>
 
-                <form id="bookingForm" onsubmit="submitBooking(event)">
-                    <div class="form-group">
-                        <label for="name">Your Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                        <div class="helper-text">Confirmation will be sent here</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                        <div class="helper-text">For day-of coordination</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="package">Select Package *</label>
-                        <select id="package" name="package" required>
-                            <option value="">Choose a package</option>
-                            <option value="budding">Budding Bloom - $475</option>
-                            <option value="blossoming">Blossoming Celebration - $725 (Most Popular)</option>
-                            <option value="luxury">Luxury Blooms - $1,200</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="occasion">Occasion Type *</label>
-                        <select id="occasion" name="occasion" required>
-                            <option value="">Select occasion</option>
-                            <option value="birthday">Birthday</option>
-                            <option value="anniversary">Anniversary</option>
-                            <option value="proposal">Proposal</option>
-                            <option value="graduation">Graduation</option>
-                            <option value="babyshower">Baby Shower</option>
-                            <option value="surprise">Surprise Party</option>
-                            <option value="other">Other Celebration</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="hotelName">Hotel Name *</label>
-                        <input type="text" id="hotelName" name="hotelName" required>
-                        <div class="helper-text">We'll coordinate with hotel staff</div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="checkInDate">Check-in Date *</label>
-                            <input type="date" id="checkInDate" name="checkInDate" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="setupTime">Setup Time *</label>
-                            <input type="time" id="setupTime" name="setupTime" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="roomNumber">Room Number (if known)</label>
-                        <input type="text" id="roomNumber" name="roomNumber" placeholder="Will coordinate closer to date if unknown">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="guestArrival">Expected Guest Arrival Time *</label>
-                        <input type="time" id="guestArrival" name="guestArrival" required>
-                        <div class="helper-text">We finish setup 1 hour before</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="colorScheme">Preferred Color Scheme</label>
-                        <input type="text" id="colorScheme" name="colorScheme" placeholder="e.g., Rose gold & white, Pink & gold, Blue & silver">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="customText">Custom Text for Sign/Banner</label>
-                        <input type="text" id="customText" name="customText" placeholder="e.g., Happy 30th Sarah!, Will You Marry Me?">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="specialRequests">Special Requests or Theme Details</label>
-                        <textarea id="specialRequests" name="specialRequests" placeholder="Tell us about any specific decorations, themes, or special touches you'd like..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="hearAbout">How did you hear about us?</label>
-                        <select id="hearAbout" name="hearAbout">
-                            <option value="">Select one</option>
-                            <option value="instagram">Instagram</option>
-                            <option value="facebook">Facebook</option>
-                            <option value="google">Google Search</option>
-                            <option value="friend">Friend/Family Referral</option>
-                            <option value="hotel">Hotel Recommendation</option>
-                            <option value="other">Other</option>
-                        </select>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8uLeBb3-0vFknuKHJcqNsdhk_27p29h06XOnpqe7mRc2Ulw/viewform?embedded=true" 
+        width="100%" 
+        height="2855" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0">
+    Loading…
+</iframe>
                     </div>
 
                     <button type="submit" class="submit-btn">Request Booking</button>
@@ -1393,4 +1305,5 @@
         document.getElementById('checkInDate').min = new Date().toISOString().split('T')[0];
     </script>
 </body>
+
 </html>
