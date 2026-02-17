@@ -1100,17 +1100,20 @@
                     <h2>Book Your Celebration</h2>
                     <p>Let's make your special moment unforgettable!</p>
                 </div>
-<iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSc8uLeBb3-0vFknuKHJcqNsdhk_27p29h06XOnpqe7mRc2Ulw/viewform?embedded=true" 
-        width="100%" 
-        height="2855" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0">
-    Loading…
-</iframe>
-</div>
-</div>
+
+                <!-- Google Form Embed -->
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSc8uLeBb3-0vFknuKHJcqNsdhk_27p29h06XOnpqe7mRc2Ulw/viewform?embedded=true" 
+                    width="100%" 
+                    height="2855" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    style="border: none; border-radius: 10px; margin-top: 10px;">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
 
         <!-- Virtual Room Viewer -->
         <div id="roomViewer" class="room-viewer">
@@ -1228,56 +1231,13 @@
         function bookThisPackage() {
             closeRoomViewer();
             showSection('booking');
-            document.querySelectorAll('.nav-item')[2].classList.add('active');
-            
-            // Pre-select the package
-            const packageMap = {
-                'budding': 'budding',
-                'blossoming': 'blossoming',
-                'luxury': 'luxury'
-            };
-            document.getElementById('package').value = packageMap[currentPackage];
+            document.querySelectorAll('.nav-item')[3].classList.add('active');
+            // Note: Google Forms will open fresh - users select package manually
         }
 
         // Form Submission
-        function submitBooking(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-            
-            // Simulate backend submission
-            console.log('=== BOOKING REQUEST SUBMITTED ===');
-            console.log('Email to Owner:');
-            console.log('--------------------------------');
-            console.log(`New booking request from: ${data.name}`);
-            console.log(`Email: ${data.email}`);
-            console.log(`Phone: ${data.phone}`);
-            console.log(`Package: ${data.package}`);
-            console.log(`Occasion: ${data.occasion}`);
-            console.log(`Hotel: ${data.hotelName}`);
-            console.log(`Room: ${data.roomNumber || 'TBD'}`);
-            console.log(`Check-in Date: ${data.checkInDate}`);
-            console.log(`Setup Time: ${data.setupTime}`);
-            console.log(`Guest Arrival: ${data.guestArrival}`);
-            console.log(`Color Scheme: ${data.colorScheme || 'Not specified'}`);
-            console.log(`Custom Text: ${data.customText || 'None'}`);
-            console.log(`Special Requests: ${data.specialRequests || 'None'}`);
-            console.log(`Referred by: ${data.hearAbout || 'Not specified'}`);
-            console.log('--------------------------------');
-            console.log('User Data Collected and Stored ✓');
-            console.log('Confirmation Email Sent to User ✓');
-            console.log('=================================');
-            
-            // Show success modal
-            document.getElementById('successModal').classList.add('active');
-            
-            // Reset form
-            event.target.reset();
-        }
+        // Google Forms handles all booking submissions
+        // No custom form submission code needed
 
         function closeSuccessModal() {
             document.getElementById('successModal').classList.remove('active');
@@ -1295,11 +1255,6 @@
                 closeSuccessModal();
             }
         });
-
-        // Set minimum date to today
-        document.getElementById('checkInDate').min = new Date().toISOString().split('T')[0];
     </script>
 </body>
-
 </html>
-
