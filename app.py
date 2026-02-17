@@ -27,3 +27,4 @@ with open('celebratesuite-app.html', 'r', encoding='utf-8') as file:
 # Display the HTML app
 
 components.html(html_content, height=800, scrolling=True)
+
